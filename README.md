@@ -4,7 +4,7 @@ Tabs in Laconic make less noise, giving more room to browse the web letting you 
 
 ![image](/assets/images/headerdark.png)
 
-## :keyboard: Keyboard Centered Design
+## :dart: Keyboard Centered Design
 
 See quick definitions and answers. Jump to any site quickly. Use the shortcuts.
 
@@ -21,7 +21,7 @@ See quick definitions and answers. Jump to any site quickly. Use the shortcuts.
 
 Works on top of Firefox, and [uBlock Origin works best on Firefox](https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox). Stops ads and trackers, so you can browse faster without being tracked. And when you’re using a slow or expensive internet connection, it lets you block scripts and images, so pages load faster and use less data.
 
-## :dart: How To Install
+## :gear: How To Install
 
 To install this theme, do the following:
 
