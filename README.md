@@ -12,9 +12,9 @@ See quick definitions and answers. Jump to any site quickly. Use the shortcuts.
 - `Ctrl + T` Opens a New Tab
 - `Ctrl + L` focuses the URL bar
 - `Ctrl + B` shows you the Bookmarks
-- `Ctrl + Alt + R` Toggle Reader View
 - `Ctrl + H` shows you the History Bar
 - `Ctrl + R` Refresh the page you're on
+- `Ctrl + Alt + R` Clutter-free Reader View
 - `Ctrl + Shift + A` Quick open for Add-Ons
 - `Ctrl + Shift + T` Re-opens a tab that you just closed
 
