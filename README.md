@@ -1,8 +1,8 @@
-# MEET LACONIC
-
-![image](/assets/images/headerdark.png)
+# LACONIC
 
 Tabs in Laconic make less noise, giving more room to browse the web letting you see what’s important to prevent you from getting distracted. One file without surprises. Only 3.6KiB, as simple as you always wanted.
+
+![image](/assets/images/headerdark.png)
 
 ## Keyboard Centered Design
 
@@ -24,11 +24,13 @@ Works on top of Firefox, and [uBlock Origin works best on Firefox](https://githu
 ## Make it yours
 
 > [!TIP]
-> Do you use KDE?
+> **Do you use KDE?**
 > Add to your `about:config` the following parameters:
 > `widget.use-xdg-desktop-portal.file-picker` `1`
 > `widget.use-xdg-desktop-portal.mime-handler` `1`
+
 > [!TIP]
 > In `about:config` you can make the bottom window corners rounded by setting `widget.gtk.rounded-bottom-corners.enabled` to `true`.
+
 > [!NOTE]
 > Inspired by [Min Browser](https://github.com/minbrowser/min). I wanted to bring the Min Browser experience closer to Firefox. Min is written entirely with CSS and JavaScript using Electron, and is open-source software.
