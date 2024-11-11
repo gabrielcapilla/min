@@ -1,8 +1,8 @@
 # MEET LACONIC
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="/assets/imges/headerdark.png">
-  <source media="(prefers-color-scheme: light)" srcset="/assets/imges/headerlight.png">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gabrielcapilla/firefox-laconic/refs/heads/main/assets/images/headerdark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gabrielcapilla/firefox-laconic/refs/heads/main/assets/images/headerlight.png">
 </picture>
 
 Tabs in Laconic make less noise, giving more room to browse the web letting you see what’s important to prevent you from getting distracted. One file without surprises. Only 3.6KiB, as simple as you always wanted.
