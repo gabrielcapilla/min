@@ -4,7 +4,7 @@ Tabs in Laconic make less noise, giving more room to browse the web letting you 
 
 ![image](/assets/images/headerdark.png)
 
-## Keyboard Centered Design
+## :keyboard: Keyboard Centered Design
 
 See quick definitions and answers. Jump to any site quickly. Use the shortcuts.
 
@@ -17,7 +17,7 @@ See quick definitions and answers. Jump to any site quickly. Use the shortcuts.
 - `Ctrl + Shift + A` Quick open for Add-Ons
 - `Ctrl + Shift + T` Re-opens a tab that you just closed
 
-## Protect Your Privacy
+## :ninja: Protect Your Privacy
 
 Works on top of Firefox, and [uBlock Origin works best on Firefox](https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox). Stops ads and trackers, so you can browse faster without being tracked. And when you’re using a slow or expensive internet connection, it lets you block scripts and images, so pages load faster and use less data.
 
@@ -33,7 +33,7 @@ Chrome folder:
 - Type `about:profiles` in the address bar of Firefox and find your profile folder.
 - Create a folder named `chrome` in your profile folder(s). Add the file `userChrome.css` in the `chrome` folder.
 
-## Make It Yours
+## :people_hugging: Make It Yours
 
 ### Do you use KDE?
 
