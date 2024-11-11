@@ -37,16 +37,21 @@ Chrome folder:
 
 ### Do you use KDE?
 
-Add to your `about:config` the following parameters:
+Add  your `about:config` the following parameters:
 
-- `widget.use-xdg-desktop-portal.file-picker` `1`
-- `widget.use-xdg-desktop-portal.mime-handler` `1`
+- `widget.use-xdg-desktop-portal.file-picker` change the value to `1`
+- `widget.use-xdg-desktop-portal.mime-handler` change the value to `1`
 
 ### Rounded corners
 
 In `about:config` you can make the bottom window corners rounded by setting `widget.gtk.rounded-bottom-corners.enabled` to `true`.
 
 ## Miscellaneous
+
+### Recommended Add-ons
+
+- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+- [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/)
 
 ### Prettify & Minify
 
