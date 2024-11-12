@@ -1,6 +1,6 @@
 # Firefox Laconic | Browse without distractions  
 
-Tabs in Laconic make less noise, giving more room to browse the web letting you see what’s important to prevent you from getting distracted. One file without surprises. Only 3.6KiB, as simple as you always wanted.
+Tabs in Laconic make less noise, giving more room to browse the web letting you see what’s important to prevent you from getting distracted. One file without surprises. Only 6KiB, as simple as you always wanted.
 
 ![image](/assets/images/headerdark.png)
 
@@ -61,3 +61,7 @@ The `userChrome.css` file is **minified**. This provides a very lightweight file
 ### Inspiration
 
 Inspired by [Min Browser](https://github.com/minbrowser/min). I wanted to bring the Min Browser experience closer to Firefox. Min is written entirely with CSS and JavaScript using Electron, and is open-source software.
+
+> [!IMPORTANT]
+> Work in progress.
+> You may encounter silly design errors related to the non-existent download icon or some popups that do not display correctly.
