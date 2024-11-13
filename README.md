@@ -17,6 +17,8 @@ See quick definitions and answers. Jump to any site quickly. Use the shortcuts.
 - `Ctrl + Alt + R` Clutter-free Reader View
 - `Ctrl + Shift + A` Quick open for Add-Ons
 - `Ctrl + Shift + T` Re-opens a tab that you just closed
+- `Alt + Left Arrow` Go Back
+- `Alt + Right Arrow` Go Forward
 
 ## :ninja: Protect Your Privacy
 
@@ -54,14 +56,6 @@ In `about:config` you can make the bottom window corners rounded by setting `wid
 - [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
 - [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/)
 
-### Prettify & Minify
-
-The `userChrome.css` file is **minified**. This provides a very lightweight file. If you want to customize the `userChrome.css` file to add functionality, you can use Prettier. If you want a commented `userChrome.css`, let me know.
-
 ### Inspiration
 
 Inspired by [Min Browser](https://github.com/minbrowser/min). I wanted to bring the Min Browser experience closer to Firefox. Min is written entirely with CSS and JavaScript using Electron, and is open-source software.
-
-> [!IMPORTANT]
-> Work in progress.
-> You may encounter silly design errors related to the non-existent download icon or some popups that do not display correctly.
