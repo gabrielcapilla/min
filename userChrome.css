@@ -3,7 +3,8 @@
   --tab-font-size: 1em;
   --max-tab-width: none;
   --show-titlebar-buttons: block;
-  --buttons-width: 116px: --menubar-height: 10px;
+  --buttons-width: 116px:
+  --menubar-height: 10px;
   --window-drag-space: 40px;
   --window-control-width: 138px;
   --tab-background-image: -moz-element(#urlbar-input);
