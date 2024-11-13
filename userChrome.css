@@ -1,1 +1,317 @@
-:root{--tab-height:28px;--tab-font-size:1em;--max-tab-width:none;--show-titlebar-buttons:block;--buttons-width:116px:--menubar-height:10px;--window-drag-space:40px;--window-control-width:138px;--tab-background-image:-moz-element(#urlbar-input);}:root:not([customizing]) #TabsToolbar{padding:0!important;margin-left:0!important;margin-right:0!important;border-radius:0!important;}.titlebar-buttonbox-container{align-items:center;height:var(--tab-height)!important;display:var(--show-titlebar-buttons)!important;}.titlebar-button{height:var(--tab-height)!important;}#titlebar{appearance:none!important;-moz-appearance:none!important;}.tabbrowser-tab *{margin:0!important;border-radius:0!important;}.tabbrowser-tab{min-height:0!important;align-items:center!important;margin-inline-end:0!important;height:var(--tab-height)!important;font-size:var(--tab-font-size)!important;}.tabbrowser-tab[fadein]:not([pinned]){max-width:var(--max-tab-width)!important;}.tabbrowser-tab[pinned] .tab-content{height:var(--tab-height)!important;margin-top:4px!important;}.tab-icon-image{height:auto!important;margin-right:4px!important;width:calc(var(--tab-height) / 1.5)!important;}#titlebar spacer,#alltabs-button,#new-tab-button{display:none!important;}#tabs-newtab-button:hover,#tabbrowser-tabs .tabs-newtab-button:hover{background-color:var(--toolbarbutton-hover-background);}#tabs-newtab-button{padding:0!important;display:-moz-box!important;align-self:center!important;width:calc(var(--tab-height) * .8)!important;height:calc(var(--tab-height) * .8)!important;}#tabs-newtab-button>.toolbarbutton-icon{margin:0!important;padding:0!important;width:100%!important;height:100%!important;}#tabs-newtab-button>.toolbarbutton-icon,#tabbrowser-tabs .tabs-newtab-button>.toolbarbutton-icon{padding:0!important;transform:scale(.6);background-color:transparent!important;}.tabbrowser-tab:not([pinned])[selected]{pointer-events:none;}@media (-moz-platform:windows),(-moz-platform:linux){:root:is([sizemode="maximized"],[sizemode="fullscreen"]){--window-drag-space:0}#toolbar-menubar[autohide="false"] ~ #nav-bar,#titlebar:has(>[autohide="false"]) + #nav-bar{--window-drag-space:0;--menubar-height:28px}}#TabsToolbar toolbarbutton,#TabsToolbar toolbaritem,.tabbrowser-tab,.tab-close-button{pointer-events:auto;}:root:not([customizing]) .urlbar-input-container::before{left:0;content:"";display:block;position:fixed;pointer-events:auto;top:var(--menubar-height);width:var(--buttons-width);height:calc(var(--tab-min-height) + 2 * var(--tab-block-margin));}:root[tabsintitlebar]:not([customizing]) .urlbar-input-container::before{left:var(--window-drag-space);width:calc(100vw - var(--window-control-width) -var(--buttons-width) -.2 * var(--window-control-width));}.urlbar-input-container:focus-within::before{display:none!important;}:root:not([customizing]) #TabsToolbar-customization-target{z-index:1;position:relative;pointer-events:none;}:root[tabsintitlebar] .browser-titlebar,#titlebar{opacity:1!important;transition:none!important;will-change:unset!important;}.urlbar-input-box{z-index:-1!important;}#urlbar{z-index:auto!important;}#alltabs-button,#PanelUI-button,#nav-bar-overflow-button,#unified-extensions-button{z-index:2;position:relative;}:root:not([customizing]) .urlbar-input-container::before{left:0;top:0!important;position:absolute;height:var(--urlbar-container-height);}.urlbar-input-container>:not(.urlbar-input-box){opacity:0;}#urlbar-background{border:none!important;outline:none!important;box-shadow:none!important;background:transparent!important;}#urlbar-container{position:static!important;margin-left:var(--window-control-width)!important;}#remote-control-box,#urlbar-search-button{display:none;}#tracking-protection-icon-container,#identity-box{display:none!important;}.urlbarView{left:50vw;z-index:2;pointer-events:auto;width:max(99.4%,600px)!important;transform:translateX(-50%)!important;background:var(--toolbar-field-focus-background-color);border:1px solid var(--toolbar-field-focus-border-color)!important;}#navigator-toolbox:focus-within .tabbrowser-tab[selected] .tab-content{opacity:0;}.tabbrowser-tab[selected],#navigator-toolbox:focus-within .tab-background[selected]{background-size:auto!important;background-image:var(--tab-background-image)!important;background-color:var(--toolbar-field-focus-background-color)!important;background-position:calc(var(--tab-inline-padding,4px) + 6px) 3px!important;}:root:not([customizing]) #navigator-toolbox>#TabsToolbar,:root:not([customizing]) #titlebar{margin-bottom:calc(0px - var(--tab-min-height) - 2 * var(--tab-block-margin));}:root:not([customizing]) #nav-bar-customization-target>:not(#urlbar-container){visibility:collapse;}#TabsToolbar>.toolbar-items{margin-left:100px!important;}#PanelUI-button{order:-1;z-index:2;padding-top:17px!important;align-self:center!important;visibility:visible!important;width:calc(var(--tab-height) * 1.2)!important;height:calc(var(--tab-height) * 1.2)!important;}#PanelUI-button>.toolbarbutton-icon{margin:0!important;padding:0!important;width:100%!important;height:100%!important;background-color:transparent!important;}#unified-extensions-button{order:-2;z-index:2;display:flex!important;visibility:visible!important;align-self:center!important;padding-top:17px!important;}#back-button{order:-1;z-index:2;margin-top:16px!important;display:-moz-box!important;align-self:center!important;visibility:visible!important;width:calc(var(--tab-height) * .8)!important;height:calc(var(--tab-height) * .8)!important;}#back-button>.toolbarbutton-icon{margin:0!important;padding:0!important;width:100%!important;height:100%!important;}#back-button>.toolbarbutton-icon,#back-button .tabs-newtab-button>.toolbarbutton-icon{padding:0!important;transform:scale(1);background-color:transparent!important;}#private-browsing-indicator-with-label,.private-browsing-indicator{display:none}:root[privatebrowsingmode="temporary"] #PanelUI-menu-button{list-style-image:url("chrome://global/skin/icons/indicator-private-browsing.svg")!important;}#nav-bar{height:calc(var(--tab-min-height) + 2 * var(--tab-block-margin));box-shadow:none!important;background-color:transparent!important;}:root[tabsintitlebar] #titlebar:has(>[autohide="false"]) + #nav-bar{border-inline-width:0!important;}
+:root {
+  --tab-height: 28px;
+  --tab-font-size: 1em;
+  --max-tab-width: none;
+  --show-titlebar-buttons: block;
+  --buttons-width: 116px: --menubar-height: 10px;
+  --window-drag-space: 40px;
+  --window-control-width: 138px;
+  --tab-background-image: -moz-element(#urlbar-input);
+}
+
+/* Remove margins, rounded edges and padding from Firefox tab bar when the user is not in costumisation mode */
+:root:not([customizing]) #TabsToolbar {
+  padding: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Show titlebar buttons */
+.titlebar-buttonbox-container {
+  align-items: center;
+  height: var(--tab-height) !important;
+  display: var(--show-titlebar-buttons) !important;
+}
+
+/* Set the hight of the individual buttons to match the tab height */
+.titlebar-button {
+  height: var(--tab-height) !important;
+}
+
+/* Remove the default appearance of the title bar */
+#titlebar {
+  appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+/* Remove tabs margins */
+.tabbrowser-tab * {
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Apply tabs margins, height and font size */
+.tabbrowser-tab {
+  min-height: 0 !important;
+  align-items: center !important;
+  margin-inline-end: 0 !important;
+  height: var(--tab-height) !important;
+  font-size: var(--tab-font-size) !important;
+}
+
+/* Max tab width for not pinned tabs */
+.tabbrowser-tab[fadein]:not([pinned]) {
+  max-width: var(--max-tab-width) !important;
+}
+
+/* Tab heigh for pinned tabs */
+.tabbrowser-tab[pinned] .tab-content {
+  height: var(--tab-height) !important;
+  margin-top: 4px !important;
+}
+
+/* Tabs icons size */
+.tab-icon-image {
+  height: auto !important;
+  margin-right: 4px !important;
+  width: calc(var(--tab-height) / 1.5) !important;
+}
+
+/* Hide elements */
+#titlebar spacer,
+#alltabs-button,
+#new-tab-button {
+  display: none !important;
+}
+
+/* Button re-style */
+#tabs-newtab-button:hover,
+#tabbrowser-tabs .tabs-newtab-button:hover {
+  background-color: var(--toolbarbutton-hover-background);
+}
+
+/* New tab button style */
+#tabs-newtab-button {
+  padding: 0 !important;
+  display: -moz-box !important;
+  align-self: center !important;
+  width: calc(var(--tab-height) * 0.8) !important;
+  height: calc(var(--tab-height) * 0.8) !important;
+}
+
+#tabs-newtab-button>.toolbarbutton-icon {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#tabs-newtab-button>.toolbarbutton-icon,
+#tabbrowser-tabs .tabs-newtab-button>.toolbarbutton-icon {
+  padding: 0 !important;
+  transform: scale(0.6);
+  background-color: transparent !important;
+}
+
+.tabbrowser-tab:not([pinned])[selected] {
+  pointer-events: none;
+}
+
+@media (-moz-platform: windows),
+(-moz-platform: linux) {
+  :root:is([sizemode="maximized"], [sizemode="fullscreen"]) {
+    --window-drag-space: 0px;
+  }
+
+  #toolbar-menubar[autohide="false"]~#nav-bar,
+  #titlebar:has(> [autohide="false"])+#nav-bar {
+    --window-drag-space: 0px;
+    --menubar-height: 28px;
+  }
+}
+
+#TabsToolbar toolbarbutton,
+#TabsToolbar toolbaritem,
+.tabbrowser-tab,
+.tab-close-button {
+  pointer-events: auto;
+}
+
+:root:not([customizing]) .urlbar-input-container::before {
+  left: 0;
+  content: "";
+  display: block;
+  position: fixed;
+  pointer-events: auto;
+  top: var(--menubar-height);
+  width: var(--buttons-width);
+  height: calc(var(--tab-min-height) + 2 * var(--tab-block-margin));
+}
+
+:root[tabsintitlebar]:not([customizing]) .urlbar-input-container::before {
+  left: var(--window-drag-space);
+  width: calc(100vw - var(--window-control-width) -var(--buttons-width) -.2 * var(--window-control-width));
+}
+
+.urlbar-input-container:focus-within::before {
+  display: none !important;
+}
+
+:root:not([customizing]) #TabsToolbar-customization-target {
+  z-index: 1;
+  position: relative;
+  pointer-events: none;
+}
+
+:root[tabsintitlebar] .browser-titlebar,
+#titlebar {
+  opacity: 1 !important;
+  transition: none !important;
+  will-change: unset !important;
+}
+
+.urlbar-input-box {
+  z-index: -1 !important;
+}
+
+#urlbar {
+  z-index: auto !important;
+}
+
+#alltabs-button,
+#PanelUI-button,
+#nav-bar-overflow-button,
+#unified-extensions-button {
+  z-index: 2;
+  position: relative;
+}
+
+:root:not([customizing]) .urlbar-input-container::before {
+  left: 0;
+  top: 0 !important;
+  position: absolute;
+  height: var(--urlbar-container-height);
+}
+
+/* Hide urlbar icon elements like bookmarks and reader */
+.urlbar-input-container>:not(.urlbar-input-box) {
+  opacity: 0;
+}
+
+/* Create the dimensions to be able to use the address bar from the tabs. */
+#urlbar-background {
+  height: 38px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+
+  /* Use it to visualize how accurately it behaves. */
+  /* background-color: fuchsia !important; */
+}
+
+/* Allows the URL Bar to be displayed when the active tab is clicked. Very precise. */
+#urlbar-container {
+  display: flex !important;
+  justify-content: center !important;
+  margin-right: 155px !important;
+}
+
+/* Size and appearance of the BAR URL when displayed. */
+.urlbarView {
+  left: 50%;
+  z-index: 2;
+  pointer-events: auto;
+  transform: translateX(-50%) !important;
+  background: var(--toolbar-field-focus-background-color);
+  border: 1px solid var(--toolbar-field-focus-border-color) !important;
+}
+
+#remote-control-box,
+#urlbar-search-button {
+  display: none;
+}
+
+#tracking-protection-icon-container,
+#identity-box {
+  display: none !important;
+}
+
+/* Overwrite the original title with the url when clicking on the active tab. */
+#navigator-toolbox:focus-within .tabbrowser-tab[selected] .tab-content {
+  opacity: 0 !important;
+}
+
+/* Displays the URL in the tab when typing in it */
+.tabbrowser-tab[selected],
+#navigator-toolbox:focus-within .tab-background[selected] {
+  background-size: auto !important;
+  background-image: var(--tab-background-image) !important;
+  background-color: var(--toolbar-field-focus-background-color) !important;
+  background-position: calc(var(--tab-inline-padding, 4px) + 6px) 3px !important;
+}
+
+:root:not([customizing]) #navigator-toolbox>#TabsToolbar,
+:root:not([customizing]) #titlebar {
+  margin-bottom: calc(0px - var(--tab-min-height) - 2 * var(--tab-block-margin));
+}
+
+:root:not([customizing]) #nav-bar-customization-target>:not(#urlbar-container) {
+  visibility: collapse;
+}
+
+/* Replace the application menu icon `#PanelUI-menu-button` with
+the private browsing icon when you are in private browsing mode. */
+.private-browsing-indicator,
+#private-browsing-indicator-with-label {
+  display: none;
+}
+
+:root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
+  list-style-image: url("chrome://global/skin/icons/indicator-private-browsing.svg") !important;
+}
+
+/* Create a space to the left of the #TabsToolbar to make the correct space for the buttons. */
+:root:is([sizemode="normal"]) {
+  --button-width: 20px;
+  --button-spacing: 4px;
+  --buttons-count: 3;
+
+  #TabsToolbar>.toolbar-items {
+    margin-left: calc(var(--button-width) * var(--buttons-count) + var(--button-spacing) * (var(--buttons-count) - 1)) !important;
+  }
+}
+
+:root:is([sizemode="maximized"], [sizemode="fullscreen"]) {
+  --button-width: 32px;
+  --button-spacing: 6px;
+  --buttons-count: 3;
+
+  #TabsToolbar>.toolbar-items {
+    margin-left: calc(var(--button-width) * var(--buttons-count) + var(--button-spacing) * (var(--buttons-count) - 1)) !important;
+  }
+}
+
+#nav-bar {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  height: calc(var(--tab-min-height) + 2 * var(--tab-block-margin));
+}
+
+:root[tabsintitlebar] #titlebar:has(>[autohide="false"])+#nav-bar {
+  border-inline-width: 0 !important;
+}
+
+#PanelUI-button,
+#downloads-button,
+#unified-extensions-button {
+  align-self: center !important;
+  visibility: visible !important;
+  padding-top: calc(var(--tab-height) * .6) !important;
+}
+
+#PanelUI-button {
+  order: -1;
+  width: calc(var(--tab-height) * 1.2) !important;
+}
+
+#downloads-button {
+  order: -2;
+  display: flex !important;
+}
+
+#unified-extensions-button {
+  order: -2;
+  display: flex !important;
+}
