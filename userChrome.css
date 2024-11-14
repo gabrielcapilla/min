@@ -3,7 +3,7 @@
   --tab-font-size: 1em;
   --max-tab-width: none;
   --show-titlebar-buttons: block;
-  --buttons-width: 116px:
+  --buttons-width: 116px;
   --menubar-height: 10px;
   --window-drag-space: 40px;
   --window-control-width: 138px;
@@ -18,7 +18,7 @@
   border-radius: 0 !important;
 }
 
-/* Show titlebar buttons */
+/* Align and show titlebar buttons */
 .titlebar-buttonbox-container {
   align-items: center;
   height: var(--tab-height) !important;
@@ -69,46 +69,35 @@
   width: calc(var(--tab-height) / 1.5) !important;
 }
 
-/* Hide elements */
+/* When only one tab: Window title in bold & close tab button is hidden */
+.tabbrowser-tab:only-of-type .tab-text {
+  font-weight: bolder !important;
+}
+
+.tabbrowser-tab:only-of-type .tab-close-button {
+  display: none !important;
+}
+
+/* Hide specific UI elements (bookmarks, new tab button, etc.) */
+#star-button-box,
 #titlebar spacer,
 #alltabs-button,
 #new-tab-button {
   display: none !important;
 }
 
-/* Button re-style */
+/* Mouse-over button styling */
 #tabs-newtab-button:hover,
 #tabbrowser-tabs .tabs-newtab-button:hover {
   background-color: var(--toolbarbutton-hover-background);
 }
 
-/* New tab button style */
-#tabs-newtab-button {
-  padding: 0 !important;
-  display: -moz-box !important;
-  align-self: center !important;
-  width: calc(var(--tab-height) * 0.8) !important;
-  height: calc(var(--tab-height) * 0.8) !important;
-}
-
-#tabs-newtab-button>.toolbarbutton-icon {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-#tabs-newtab-button>.toolbarbutton-icon,
-#tabbrowser-tabs .tabs-newtab-button>.toolbarbutton-icon {
-  padding: 0 !important;
-  transform: scale(0.6);
-  background-color: transparent !important;
-}
-
+/* Makes the active tab interactive */
 .tabbrowser-tab:not([pinned])[selected] {
   pointer-events: none;
 }
 
+/* Define the window's drag spacing for maximised or full screen */
 @media (-moz-platform: windows),
 (-moz-platform: linux) {
   :root:is([sizemode="maximized"], [sizemode="fullscreen"]) {
@@ -122,6 +111,7 @@
   }
 }
 
+/* Buttons on the tab bar, the tabs themselves and the tab close buttons are interactive  */
 #TabsToolbar toolbarbutton,
 #TabsToolbar toolbaritem,
 .tabbrowser-tab,
@@ -129,6 +119,7 @@
   pointer-events: auto;
 }
 
+/* Address bar (urlbar) visibility styles and layout */
 :root:not([customizing]) .urlbar-input-container::before {
   left: 0;
   content: "";
@@ -145,16 +136,19 @@
   width: calc(100vw - var(--window-control-width) -var(--buttons-width) -.2 * var(--window-control-width));
 }
 
+/* Hide icons in the address bar when not in use */
 .urlbar-input-container:focus-within::before {
   display: none !important;
 }
 
+/* Disables pointer interactions in this area, but allows it to be shown visually */
 :root:not([customizing]) #TabsToolbar-customization-target {
   z-index: 1;
   position: relative;
   pointer-events: none;
 }
 
+/* When tabs are integrated in the title bar (tabsintitlebar), the title bar is completely visible (opaque) */
 :root[tabsintitlebar] .browser-titlebar,
 #titlebar {
   opacity: 1 !important;
@@ -199,17 +193,23 @@
   background: none !important;
 
   /* Use it to visualize how accurately it behaves. */
-  /* background-color: fuchsia !important; */
+  /*   background-color: fuchsia !important; */
 }
 
-/* Allows the URL Bar to be displayed when the active tab is clicked. Very precise. */
+/* Allows the address bar to be displayed when the active tab is clicked. Very precise. */
 #urlbar-container {
   display: flex !important;
   justify-content: center !important;
   margin-right: 155px !important;
 }
 
-/* Size and appearance of the BAR URL when displayed. */
+/* When the address bar container has the focus */
+#urlbar-container:focus-within {
+  position: static !important;
+  margin-left: var(--window-control-width) !important;
+}
+
+/* Size and appearance of the address bar when it is active */
 .urlbarView {
   left: 50%;
   z-index: 2;
@@ -217,6 +217,13 @@
   transform: translateX(-50%) !important;
   background: var(--toolbar-field-focus-background-color);
   border: 1px solid var(--toolbar-field-focus-border-color) !important;
+}
+
+/* When the address bar is active (in focus), expands to full width */
+#urlbar-container:focus-within .urlbarView {
+  left: 0 !important;
+  width: 99.8vw !important;
+  transform: none !important;
 }
 
 #remote-control-box,
@@ -243,11 +250,13 @@
   background-position: calc(var(--tab-inline-padding, 4px) + 6px) 3px !important;
 }
 
+/* Margin and visibility settings for customisation */
 :root:not([customizing]) #navigator-toolbox>#TabsToolbar,
 :root:not([customizing]) #titlebar {
   margin-bottom: calc(0px - var(--tab-min-height) - 2 * var(--tab-block-margin));
 }
 
+/* Define the visibility of the elements during customisation */
 :root:not([customizing]) #nav-bar-customization-target>:not(#urlbar-container) {
   visibility: collapse;
 }
@@ -294,6 +303,7 @@ the private browsing icon when you are in private browsing mode. */
   border-inline-width: 0 !important;
 }
 
+/* Buttons stuff */
 #PanelUI-button,
 #downloads-button,
 #unified-extensions-button {
@@ -315,4 +325,28 @@ the private browsing icon when you are in private browsing mode. */
 #unified-extensions-button {
   order: -2;
   display: flex !important;
+}
+
+/* New tab button style */
+#tabs-newtab-button {
+  padding: 0 !important;
+  display: -moz-box !important;
+  align-self: center !important;
+  width: calc(var(--tab-height) * .8) !important;
+  height: calc(var(--tab-height) * .8) !important;
+}
+
+/* Style of the new tab button icon */
+#tabs-newtab-button>.toolbarbutton-icon {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#tabs-newtab-button>.toolbarbutton-icon,
+#tabbrowser-tabs .tabs-newtab-button>.toolbarbutton-icon {
+  padding: 0 !important;
+  transform: scale(.6);
+  background-color: transparent !important;
 }
