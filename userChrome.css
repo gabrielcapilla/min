@@ -78,11 +78,12 @@
   display: none !important;
 }
 
-/* Hide specific UI elements (bookmarks, new tab button, etc.) */
+/* Hide specific UI elements */
 #star-button-box,
 #titlebar spacer,
 #alltabs-button,
-#new-tab-button {
+#new-tab-button,
+#translations-button {
   display: none !important;
 }
 
@@ -306,10 +307,16 @@ the private browsing icon when you are in private browsing mode. */
 /* Buttons stuff */
 #PanelUI-button,
 #downloads-button,
+#tabs-newtab-button,
 #unified-extensions-button {
   align-self: center !important;
   visibility: visible !important;
   padding-top: calc(var(--tab-height) * .6) !important;
+}
+
+#tabs-newtab-button {
+  padding: 0 !important;
+  height: calc(var(--tab-height) * .8) !important;
 }
 
 #PanelUI-button {
@@ -325,28 +332,4 @@ the private browsing icon when you are in private browsing mode. */
 #unified-extensions-button {
   order: -2;
   display: flex !important;
-}
-
-/* New tab button style */
-#tabs-newtab-button {
-  padding: 0 !important;
-  display: -moz-box !important;
-  align-self: center !important;
-  width: calc(var(--tab-height) * .8) !important;
-  height: calc(var(--tab-height) * .8) !important;
-}
-
-/* Style of the new tab button icon */
-#tabs-newtab-button>.toolbarbutton-icon {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-#tabs-newtab-button>.toolbarbutton-icon,
-#tabbrowser-tabs .tabs-newtab-button>.toolbarbutton-icon {
-  padding: 0 !important;
-  transform: scale(.6);
-  background-color: transparent !important;
 }
