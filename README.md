@@ -1,10 +1,10 @@
-# Firefox Laconic | Browse without distractions  
+# Firefox Hello | Browse without distractions  
 
 ![Static Badge](https://img.shields.io/badge/Firefox-✓-blue)
 ![Static Badge](https://img.shields.io/badge/Cachy_Browser-✓-blue)
 ![Static Badge](https://img.shields.io/badge/Firefox_Developer_Edition-%E2%9C%95-red)
 
-Tabs in Laconic make less noise, giving more room to browse the web letting you see what’s important to prevent you from getting distracted. One file without surprises, as simple as you always wanted.
+Tabs in Hello make less noise, giving more room to browse the web letting you see what’s important to prevent you from getting distracted. One file without surprises, as simple as you always wanted.
 
 <!-- ![image](/assets/images/headerlight.png) -->
 ![image](/assets/images/headerdark.png)
@@ -34,12 +34,12 @@ Works on top of Firefox, and [uBlock Origin works best on Firefox](https://githu
 To install this theme, do the following:
 
 - Type `about:config` in the address bar of Firefox.
-- Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and put it on `true`. Then restart the browser.
+- Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and put it on `true`..
 
 Chrome folder:
 
 - Type `about:profiles` in the address bar of Firefox and find your profile folder.
-- Create a folder named `chrome` in your profile folder(s). Add the file `userChrome.css` in the `chrome` folder.
+- Create a folder named `chrome` in your profile folder(s). Add the file `userChrome.css` in the `chrome` folder. Then restart the browser.
 
 ## :people_hugging: Make It Yours
 
