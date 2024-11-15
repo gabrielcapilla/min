@@ -1,5 +1,9 @@
 # Firefox Laconic | Browse without distractions  
 
+![Static Badge](https://img.shields.io/badge/Firefox-✓-blue)
+![Static Badge](https://img.shields.io/badge/Cachy_Browser-✓-blue)
+![Static Badge](https://img.shields.io/badge/Firefox_Developer_Edition-%E2%9C%95-red)
+
 Tabs in Laconic make less noise, giving more room to browse the web letting you see what’s important to prevent you from getting distracted. One file without surprises, as simple as you always wanted.
 
 <!-- ![image](/assets/images/headerlight.png) -->
