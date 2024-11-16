@@ -8,6 +8,7 @@
   --window-drag-space: 40px;
   --window-control-width: 138px;
   --tab-background-image: -moz-element(#urlbar-input);
+  --shadow-effect: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15);
 }
 
 /* Remove margins, rounded edges and padding from Firefox tab bar when the user is not in costumisation mode */
@@ -79,11 +80,13 @@
 }
 
 /* Hide specific UI elements */
-#star-button-box,
-#titlebar spacer,
-#alltabs-button,
 #new-tab-button,
-#translations-button {
+#alltabs-button,
+#titlebar spacer,
+#star-button-box,
+#reader-mode-button,
+#translations-button,
+#reader-mode-button-icon {
   display: none !important;
 }
 
@@ -210,6 +213,13 @@
   margin-left: var(--window-control-width) !important;
 }
 
+/* Enable the blur effect */
+#main-window:not([inDOMFullscreen]) {
+  #browser {
+    clip-path: circle(100%);
+  }
+}
+
 /* Size and appearance of the address bar when it is active */
 .urlbarView {
   left: 50%;
@@ -218,6 +228,11 @@
   transform: translateX(-50%) !important;
   background: var(--toolbar-field-focus-background-color);
   border: 1px solid var(--toolbar-field-focus-border-color) !important;
+
+/* Makes the urlbar dropdown transparent and applies the blur effect */
+  background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
+  backdrop-filter: blur(30px) !important;
+  box-shadow: var(--shadow-effect) !important;
 }
 
 /* When the address bar is active (in focus), expands to full width */
@@ -316,6 +331,12 @@ the private browsing icon when you are in private browsing mode. */
 
 #tabs-newtab-button {
   padding: 0 !important;
+  height: calc(var(--tab-height) * .8) !important;
+}
+
+#firefox-view-button {
+  padding: 0 !important;
+  align-self: center !important;
   height: calc(var(--tab-height) * .8) !important;
 }
 
