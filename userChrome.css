@@ -59,12 +59,12 @@
 /* Concise urlbar: Hide more elements.  */
 #urlbar .search-one-offs:not([hidden]){display:none!important;user-select:none!important;}
 
+/* Hide urlbar icon elements like "Switch tab", bookmarks and reader */
+.urlbar-input-container>:not(.urlbar-input-box){z-index:-32!important;}
+
 #urlbar{z-index:auto!important;}
 .urlbar-input-box{z-index:-32!important;margin-left:-999px!important;}
 #alltabs-button,#PanelUI-button,#unified-extensions-button{z-index:1;position:relative;}
-
-/* Hide urlbar icon elements like "Switch tab", bookmarks and reader */
-.urlbar-input-container>:not(.urlbar-input-box){z-index:-32!important;}
 
 /* Create the dimensions to be able to use the address bar from the tabs. */
 #urlbar-background {
@@ -190,3 +190,7 @@ the private browsing icon when you are in private browsing mode. */
 #PanelUI-button{order:-1;width:calc(var(--tab-height) * 1.2)!important;}
 #downloads-button,#unified-extensions-button{order:-2;display:flex!important;}
 #tabs-newtab-button{padding:0!important;height:calc(var(--tab-height) * .8)!important;}
+
+/* Privacy blur */
+#appMenu-popup #appMenu-fxa-label2:hover #appMenu-header-description{filter:blur(0)!important;}
+#appMenu-popup #appMenu-header-description{filter:blur(8px)!important;transition:filter 100ms ease-out!important;transition-delay:600ms!important;}
