@@ -56,8 +56,11 @@
   will-change: unset !important;
 }
 
+/* Concise urlbar: Hide more elements.  */
+#urlbar .search-one-offs:not([hidden]){display:none!important;user-select:none!important;}
+
 #urlbar{z-index:auto!important;}
-.urlbar-input-box{z-index:-32!important;}
+.urlbar-input-box{z-index:-32!important;margin-left:-999px!important;}
 #alltabs-button,#PanelUI-button,#unified-extensions-button{z-index:1;position:relative;}
 
 /* Hide urlbar icon elements like "Switch tab", bookmarks and reader */
