@@ -1,8 +1,6 @@
 :root {
   --tab-height: 28px;
   --tab-font-size: 1em;
-  --max-tab-width: none;
-  --show-titlebar-buttons: block;
   --buttons-width: 116px;
   --menubar-height: 10px;
   --window-drag-space: 40px;
@@ -11,37 +9,8 @@
   --shadow-effect: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15);
 }
 
-/* Remove margins, rounded edges and padding from Firefox tab bar when the user is not in costumisation mode */
-:root:not([customizing]) #TabsToolbar {
-  padding: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  border-radius: 0 !important;
-}
-
-/* Align and show titlebar buttons */
-.titlebar-buttonbox-container {
-  align-items: center;
-  height: var(--tab-height) !important;
-  display: var(--show-titlebar-buttons) !important;
-}
-
 /* Set the hight of the individual buttons to match the tab height */
-.titlebar-button {
-  height: var(--tab-height) !important;
-}
-
-/* Remove the default appearance of the title bar */
-#titlebar {
-  appearance: none !important;
-  -moz-appearance: none !important;
-}
-
-/* Remove tabs margins */
-.tabbrowser-tab * {
-  margin: 0 !important;
-  border-radius: 0 !important;
-}
+.titlebar-button {height: var(--tab-height) !important;}
 
 /* Apply tabs margins, height and font size */
 .tabbrowser-tab {
@@ -53,97 +22,24 @@
 }
 
 /* Max tab width for not pinned tabs */
-.tabbrowser-tab[fadein]:not([pinned]) {
-  max-width: var(--max-tab-width) !important;
-}
-
-/* Tab heigh for pinned tabs */
-.tabbrowser-tab[pinned] .tab-content {
-  height: var(--tab-height) !important;
-  margin-top: 4px !important;
-}
-
-/* Tabs icons size */
-.tab-icon-image {
-  height: auto !important;
-  margin-right: 4px !important;
-  width: calc(var(--tab-height) / 1.5) !important;
-}
+.tabbrowser-tab[fadein]:not([pinned]){max-width:-moz-available!important}
 
 /* When only one tab: Window title in bold & close tab button is hidden */
-.tabbrowser-tab:only-of-type .tab-text {
-  font-weight: bolder !important;
-}
-
-.tabbrowser-tab:only-of-type .tab-close-button {
-  display: none !important;
-}
+.tabbrowser-tab:only-of-type .tab-text{font-weight:bolder!important;}
+.tabbrowser-tab:only-of-type .tab-close-button,.tabbrowser-tab:only-of-type .browser-titlebar{display:none;pointer-events:none;}
 
 /* Hide specific UI elements */
-#new-tab-button,
-#alltabs-button,
-#titlebar spacer,
-#star-button-box,
-#reader-mode-button,
-#translations-button,
-#reader-mode-button-icon {
-  display: none !important;
-}
+#new-tab-button,#alltabs-button,#titlebar spacer,#star-button-box,#reader-mode-button,#translations-button,#reader-mode-button-icon{display:none!important}
 
 /* Mouse-over button styling */
 #tabs-newtab-button:hover,
-#tabbrowser-tabs .tabs-newtab-button:hover {
-  background-color: var(--toolbarbutton-hover-background);
-}
+#tabbrowser-tabs .tabs-newtab-button:hover{background-color:var(--toolbarbutton-hover-background);}
 
 /* Makes the active tab interactive */
-.tabbrowser-tab:not([pinned])[selected] {
-  pointer-events: none;
-}
-
-/* Define the window's drag spacing for maximised or full screen */
-@media (-moz-platform: windows),
-(-moz-platform: linux) {
-  :root:is([sizemode="maximized"], [sizemode="fullscreen"]) {
-    --window-drag-space: 0px;
-  }
-
-  #toolbar-menubar[autohide="false"]~#nav-bar,
-  #titlebar:has(> [autohide="false"])+#nav-bar {
-    --window-drag-space: 0px;
-    --menubar-height: 28px;
-  }
-}
+.tabbrowser-tab:not([pinned])[selected]{pointer-events:none;}
 
 /* Buttons on the tab bar, the tabs themselves and the tab close buttons are interactive  */
-#TabsToolbar toolbarbutton,
-#TabsToolbar toolbaritem,
-.tabbrowser-tab,
-.tab-close-button {
-  pointer-events: auto;
-}
-
-/* Address bar (urlbar) visibility styles and layout */
-:root:not([customizing]) .urlbar-input-container::before {
-  left: 0;
-  content: "";
-  display: block;
-  position: fixed;
-  pointer-events: auto;
-  top: var(--menubar-height);
-  width: var(--buttons-width);
-  height: calc(var(--tab-min-height) + 2 * var(--tab-block-margin));
-}
-
-:root[tabsintitlebar]:not([customizing]) .urlbar-input-container::before {
-  left: var(--window-drag-space);
-  width: calc(100vw - var(--window-control-width) -var(--buttons-width) -.2 * var(--window-control-width));
-}
-
-/* Hide icons in the address bar when not in use */
-.urlbar-input-container:focus-within::before {
-  display: none !important;
-}
+.tabbrowser-tab,.tab-close-button,#TabsToolbar toolbaritem,#TabsToolbar toolbarbutton{pointer-events:auto;}
 
 /* Disables pointer interactions in this area, but allows it to be shown visually */
 :root:not([customizing]) #TabsToolbar-customization-target {
@@ -160,65 +56,38 @@
   will-change: unset !important;
 }
 
-.urlbar-input-box {
-  z-index: -1 !important;
-}
+#urlbar{z-index:auto!important;}
+.urlbar-input-box{z-index:-32!important;}
+#alltabs-button,#PanelUI-button,#unified-extensions-button{z-index:1;position:relative;}
 
-#urlbar {
-  z-index: auto !important;
-}
-
-#alltabs-button,
-#PanelUI-button,
-#nav-bar-overflow-button,
-#unified-extensions-button {
-  z-index: 2;
-  position: relative;
-}
-
-:root:not([customizing]) .urlbar-input-container::before {
-  left: 0;
-  top: 0 !important;
-  position: absolute;
-  height: var(--urlbar-container-height);
-}
-
-/* Hide urlbar icon elements like bookmarks and reader */
-.urlbar-input-container>:not(.urlbar-input-box) {
-  opacity: 0;
-}
+/* Hide urlbar icon elements like "Switch tab", bookmarks and reader */
+.urlbar-input-container>:not(.urlbar-input-box){z-index:-32!important;}
 
 /* Create the dimensions to be able to use the address bar from the tabs. */
 #urlbar-background {
-  height: 38px !important;
+  height: calc(var(--tab-height) * 1.35) !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
   background: none !important;
 
   /* Use it to visualize how accurately it behaves. */
-  /*   background-color: fuchsia !important; */
+  /* background-color: fuchsia !important; */
 }
 
 /* Allows the address bar to be displayed when the active tab is clicked. Very precise. */
 #urlbar-container {
   display: flex !important;
+  /* Margin-right need use some quick maths */
+  margin-right: 168px !important;
   justify-content: center !important;
-  margin-right: 155px !important;
 }
 
 /* When the address bar container has the focus */
-#urlbar-container:focus-within {
-  position: static !important;
-  margin-left: var(--window-control-width) !important;
-}
+#urlbar-container:focus-within{position:static!important;margin-left:var(--window-control-width)!important;}
 
 /* Enable the blur effect */
-#main-window:not([inDOMFullscreen]) {
-  #browser {
-    clip-path: circle(100%);
-  }
-}
+#main-window:not([inDOMFullscreen]){#browser{clip-path:circle(100%);}}
 
 /* Size and appearance of the address bar when it is active */
 .urlbarView {
@@ -229,33 +98,20 @@
   background: var(--toolbar-field-focus-background-color);
   border: 1px solid var(--toolbar-field-focus-border-color) !important;
 
-/* Makes the urlbar dropdown transparent and applies the blur effect */
+/* Makes the dropdown transparent and applies a blurring effect */
   background-color: light-dark(rgba(255, 255, 255, .55), rgba(25, 25, 25, .65)) !important;
   backdrop-filter: blur(30px) !important;
   box-shadow: var(--shadow-effect) !important;
 }
 
 /* When the address bar is active (in focus), expands to full width */
-#urlbar-container:focus-within .urlbarView {
-  left: 0 !important;
-  width: 99.8vw !important;
-  transform: none !important;
-}
+#urlbar-container:focus-within .urlbarView{left:0!important;transform:none!important;}
 
-#remote-control-box,
-#urlbar-search-button {
-  display: none;
-}
-
-#tracking-protection-icon-container,
-#identity-box {
-  display: none !important;
-}
+#remote-control-box,#urlbar-search-button{display:none;}
+#tracking-protection-icon-container,#identity-box{display:none!important;}
 
 /* Overwrite the original title with the url when clicking on the active tab. */
-#navigator-toolbox:focus-within .tabbrowser-tab[selected] .tab-content {
-  opacity: 0 !important;
-}
+#navigator-toolbox:focus-within .tabbrowser-tab[selected] .tab-content{opacity:0!important;}
 
 /* Displays the URL in the tab when typing in it */
 .tabbrowser-tab[selected],
@@ -273,20 +129,12 @@
 }
 
 /* Define the visibility of the elements during customisation */
-:root:not([customizing]) #nav-bar-customization-target>:not(#urlbar-container) {
-  visibility: collapse;
-}
+:root:not([customizing]) #nav-bar-customization-target>:not(#urlbar-container){visibility:collapse;}
 
 /* Replace the application menu icon `#PanelUI-menu-button` with
 the private browsing icon when you are in private browsing mode. */
-.private-browsing-indicator,
-#private-browsing-indicator-with-label {
-  display: none;
-}
-
-:root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
-  list-style-image: url("chrome://global/skin/icons/indicator-private-browsing.svg") !important;
-}
+.private-browsing-indicator,#private-browsing-indicator-with-label{display:none;}
+:root[privatebrowsingmode="temporary"] #PanelUI-menu-button{list-style-image:url("chrome://global/skin/icons/indicator-private-browsing.svg")!important;}
 
 /* Create a space to the left of the #TabsToolbar to make the correct space for the buttons. */
 :root:is([sizemode="normal"]) {
@@ -315,11 +163,9 @@ the private browsing icon when you are in private browsing mode. */
   height: calc(var(--tab-min-height) + 2 * var(--tab-block-margin));
 }
 
-:root[tabsintitlebar] #titlebar:has(>[autohide="false"])+#nav-bar {
-  border-inline-width: 0 !important;
-}
+:root[tabsintitlebar] #titlebar:has(>[autohide="false"])+#nav-bar{border-inline-width:0!important;}
 
-/* Buttons stuff */
+/* Buttons Tweaks */
 #PanelUI-button,
 #downloads-button,
 #tabs-newtab-button,
@@ -329,28 +175,15 @@ the private browsing icon when you are in private browsing mode. */
   padding-top: calc(var(--tab-height) * .6) !important;
 }
 
-#tabs-newtab-button {
-  padding: 0 !important;
-  height: calc(var(--tab-height) * .8) !important;
-}
-
 #firefox-view-button {
   padding: 0 !important;
+  clip-path: circle(50%);
   align-self: center !important;
-  height: calc(var(--tab-height) * .8) !important;
+  height: calc(var(--tab-height) * 0.5) !important;
 }
 
-#PanelUI-button {
-  order: -1;
-  width: calc(var(--tab-height) * 1.2) !important;
-}
-
-#downloads-button {
-  order: -2;
-  display: flex !important;
-}
-
-#unified-extensions-button {
-  order: -2;
-  display: flex !important;
-}
+/* Hides the Overflow-button without breaking anything  */
+#nav-bar-overflow-button{visibility:hidden!important;}
+#PanelUI-button{order:-1;width:calc(var(--tab-height) * 1.2)!important;}
+#downloads-button,#unified-extensions-button{order:-2;display:flex!important;}
+#tabs-newtab-button{padding:0!important;height:calc(var(--tab-height) * .8)!important;}
