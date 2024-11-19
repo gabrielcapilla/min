@@ -56,9 +56,6 @@
   will-change: unset !important;
 }
 
-/* Concise urlbar: Hide more elements.  */
-#urlbar .search-one-offs:not([hidden]){display:none!important;user-select:none!important;}
-
 /* Hide urlbar icon elements like "Switch tab", bookmarks and reader */
 .urlbar-input-container>:not(.urlbar-input-box){z-index:-32!important;}
 
@@ -73,15 +70,11 @@
   outline: none !important;
   box-shadow: none !important;
   background: none !important;
-
-  /* Use it to visualize how accurately it behaves. */
-  /* background-color: fuchsia !important; */
 }
 
 /* Allows the address bar to be displayed when the active tab is clicked. Very precise. */
 #urlbar-container {
   display: flex !important;
-  /* Margin-right need use some quick maths */
   margin-right: 168px !important;
   justify-content: center !important;
 }
@@ -190,7 +183,3 @@ the private browsing icon when you are in private browsing mode. */
 #PanelUI-button{order:-1;width:calc(var(--tab-height) * 1.2)!important;}
 #downloads-button,#unified-extensions-button{order:-2;display:flex!important;}
 #tabs-newtab-button{padding:0!important;height:calc(var(--tab-height) * .8)!important;}
-
-/* Privacy blur */
-#appMenu-popup #appMenu-fxa-label2:hover #appMenu-header-description{filter:blur(0)!important;}
-#appMenu-popup #appMenu-header-description{filter:blur(8px)!important;transition:filter 100ms ease-out!important;transition-delay:600ms!important;}
