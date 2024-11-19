@@ -40,7 +40,11 @@ Works on top of Firefox, and [uBlock Origin works best on Firefox](https://githu
 To install this theme, do the following:
 
 - Type `about:config` in the address bar of Firefox.
-- Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and put it on `true`.
+- Put it on `true`
+
+  ```md
+  toolkit.legacyUserProfileCustomizations.stylesheets
+  ```
 
 Chrome folder:
 
