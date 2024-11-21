@@ -1,9 +1,6 @@
 :root {
   --tab-height: 28px;
   --tab-font-size: 1em;
-  --buttons-width: 116px;
-  --menubar-height: 10px;
-  --window-drag-space: 40px;
   --window-control-width: 138px;
   --tab-background-image: -moz-element(#urlbar-input);
   --shadow-effect: 0 15px 25px rgba(0, 0, 0, .25), 0 0 0 .5px rgba(0, 0, 0, .15);
