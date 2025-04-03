@@ -14,10 +14,6 @@ Tabs make less noise, giving more room to browse the web letting you see what’
 <source media="(prefers-color-scheme: dark)" srcset="/assets/images/lookandfeel.png">
 </picture>
 
-### Look and feel
-
-![image](/assets/images/lookandfeel.png)
-
 ## :dart: Keyboard Centered Design
 
 Jump to any site quickly. Use the shortcuts.
