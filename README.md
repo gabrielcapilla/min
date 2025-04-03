@@ -10,8 +10,8 @@ Tabs make less noise, giving more room to browse the web letting you see what’
 ## Look and feel
 
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="/assets/images/headerlight.png">
-<source media="(prefers-color-scheme: dark)" srcset="/assets/images/lookandfeel.png">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/gabrielcapilla/min/blob/bf31b07961a46f30f2c77e1e7e6b44f573dc2991/assets/images/headerlight.png">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/gabrielcapilla/min/blob/bf31b07961a46f30f2c77e1e7e6b44f573dc2991/assets/images/lookandfeel.png">
 </picture>
 
 ## :dart: Keyboard Centered Design
